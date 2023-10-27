@@ -8,7 +8,13 @@ const textResults: string[] = [];
 //type is a typescript feature, but typeof is there is javascript
 //the below thing is called a type alias
 type numOrString = number | string;
-type resultObjType = { val: number; timestamp: Date };
+// type resultObjType = { val: number; timestamp: Date };
+//for custom objects datatypes, we can use interfaces as well
+interface resultObjType {
+  val : number;
+  timestamp : Date;
+}
+
 
 function add(num1: numOrString, num2: numOrString) {
   if (typeof num1 === "number" && typeof num2 === "number") {
